@@ -7,3 +7,5 @@
     cd <project name>
     npm install
     npm run dev# getstart_vue_js
+### install vue router
+    npm install --save vue-router
