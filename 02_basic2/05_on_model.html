@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="toast">Toast bread</button> 
+        <input v-model="toastedBreads" />
+        Quantity to put in the oven: {{toastedBreads}}
+    </div>
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        methods: {
+            toast (){ 
+                this.toastedBreads++
+                }
+         },
+        data: {
+          toastedBreads: 0
+   } })
+</script>
+</html>

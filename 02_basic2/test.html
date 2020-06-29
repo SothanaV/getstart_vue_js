@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <h1>Batminton Score</h1>
+    <div id="app">
+        <button v-on:click="plus_red">RED +</button>
+        <button v-on:click="minus_red">RED -</button>  
+        <input v-model="red_score" />
+        Quantity to put in the oven: {{red_score}}
+
+
+    </div>
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        methods: {
+            plus_red (){ 
+                this.red_score++;
+            },
+            minus_red(){
+                this.red_score--;
+            }
+         },
+        data: {
+          red_score: 0,
+          blue_score:0
+   } })
+</script>
+</html>
